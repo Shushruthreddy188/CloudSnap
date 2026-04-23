@@ -45,3 +45,81 @@ frontend/
 backend/
 .gitignore
 README.md
+
+
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/Shushruthreddy188/CloudSnap.git
+cd CloudSnap
+
+🔧 Backend Setup
+cd backend
+npm install
+
+Create .env file in backend folder
+PORT=5000
+AWS_REGION=us-east-2
+AWS_BUCKET_NAME=your-bucket-name
+AWS_ACCESS_KEY_ID=your-access-key
+AWS_SECRET_ACCESS_KEY=your-secret-key
+
+
+Run backend server
+node server.js
+
+Server will run on:
+http://localhost:5000
+
+💻 Frontend Setup
+cd frontend
+npm install
+npm run dev
+
+Frontend will run on:
+http://localhost:5173 (or similar Vite port)
+
+🔐 How Security Works
+Images are uploaded to a private S3 bucket
+Backend generates a presigned URL
+Frontend uses this URL to preview the image
+The URL expires after a fixed time
+
+This ensures:
+
+No public access to your bucket
+Temporary, controlled access to files
+
+
+🧠 What I Learned
+Handling file uploads in full-stack applications
+Integrating AWS S3 using AWS SDK v3
+Generating presigned URLs for secure access
+Managing environment variables securely
+Building responsive and interactive UI
+
+⚠️ Important Notes
+.env file is not committed for security reasons
+Never expose AWS credentials publicly
+Use .env.example as a reference
+
+
+📬 Future Improvements
+Drag & drop upload enhancements
+Multiple image uploads
+Image compression before upload
+CloudFront CDN integration
+User authentication for uploads
+
+👨‍💻 Author
+
+Built by Shushruth Kumar Reddy Mandadi
+
+⭐ Support
+
+If you like this project, give it a ⭐ on GitHub!
