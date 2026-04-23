@@ -189,7 +189,7 @@ export default function App() {
         <div className="brand">
           <div className="brand-icon">☁️</div>
           <div>
-            <div className="brand-title">Cloud Carnival</div>
+            <div className="brand-title">CloudSnap</div>
             <div className="brand-subtitle">S3 image launcher</div>
           </div>
         </div>
