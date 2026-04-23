@@ -125,12 +125,21 @@ http://localhost:5173
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/4d131672-a7fa-4e97-8b4e-416cfc27b7e3" width="45%" />
-  <img src="https://github.com/user-attachments/assets/ea7dc26a-0728-44c8-baf1-60e747ff7f19" width="45%" />
+  <img src="https://github.com/user-attachments/assets/4d131672-a7fa-4e97-8b4e-416cfc27b7e3" width="700"/>
+  <br/>
+  <em>① Initial state — No image selected, ready to upload</em>
 </p>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/446d353a-de56-4c6a-b817-43b55a2b5f47" width="60%" />
+  <img src="https://github.com/user-attachments/assets/ea7dc26a-0728-44c8-baf1-60e747ff7f19" width="700"/>
+  <br/>
+  <em>② Local preview — Image selected and displayed before upload</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/446d353a-de56-4c6a-b817-43b55a2b5f47" width="700"/>
+  <br/>
+  <em>③ Cloud result — Image successfully uploaded and fetched via secure presigned URL</em>
 </p>
 
 ---
