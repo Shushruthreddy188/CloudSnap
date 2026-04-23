@@ -122,6 +122,13 @@ http://localhost:5173
 
 ---
 
+## 📸 Screenshots
+<img width="1278" height="932" alt="Screenshot 2026-04-22 212543" src="https://github.com/user-attachments/assets/4d131672-a7fa-4e97-8b4e-416cfc27b7e3" />
+<img width="1256" height="930" alt="Screenshot 2026-04-22 212726" src="https://github.com/user-attachments/assets/ea7dc26a-0728-44c8-baf1-60e747ff7f19" />
+<img width="1284" height="929" alt="Screenshot 2026-04-22 212912" src="https://github.com/user-attachments/assets/446d353a-de56-4c6a-b817-43b55a2b5f47" />
+
+---
+
 ## 🧠 What I Learned
 
 * Handling file uploads in full-stack applications
