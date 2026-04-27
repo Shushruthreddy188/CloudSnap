@@ -15,7 +15,6 @@ const getTime = () =>
     minute: "2-digit",
     second: "2-digit",
   });
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";
 
 export default function App() {
   const [file, setFile] = useState(null);
@@ -41,6 +40,8 @@ export default function App() {
   const [dragActive, setDragActive] = useState(false);
   const [copiedUrl, setCopiedUrl] = useState(false);
   const [copiedPath, setCopiedPath] = useState(false);
+
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";
 
   const previewUrl = useMemo(() => {
     if (!file) return "";
