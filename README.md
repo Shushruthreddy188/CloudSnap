@@ -1,8 +1,14 @@
 # ☁️ CloudSnap
 
-CloudSnap is a full-stack image uploader that lets users upload images to Amazon S3 and preview them securely using presigned URLs.
+CloudSnap is a full-stack cloud image uploader that lets users upload images to Amazon S3 and securely preview them using presigned URLs.
 
-Built with a modern React frontend and a Node.js + Express backend, this project demonstrates secure file handling, cloud storage integration, and a clean, interactive UI.
+It is deployed as a distributed system with a modern React frontend on Vercel and a Node.js backend on Render.
+
+---
+
+# 🌍 Live Demo
+🌐 Frontend: https://cloud-snap-five.vercel.app
+⚙️ Backend API: https://cloudsnap-8qek.onrender.com
 
 ---
 
@@ -10,10 +16,26 @@ Built with a modern React frontend and a Node.js + Express backend, this project
 
 * 📸 Upload images from browser
 * 🖼️ Instant local preview before upload
-* ☁️ Upload images to Amazon S3
-* 🔐 Secure access using presigned URLs (no public bucket needed)
-* 📊 Upload progress + activity log
-* 🎛️ Clean UI with cloud-style experience
+* ☁️ Upload images to private Amazon S3 bucket
+* 🔐 Secure access using presigned URLs (no public access)
+* 📊 Clean, cloud-inspired UI
+* 🎛️ Fully deployed across cloud platforms
+
+---
+
+# 🏗️ Architecture
+
+```text
+User (Browser)
+      ↓
+Vercel (React Frontend)
+      ↓
+Render (Node.js Backend)
+      ↓
+AWS S3 (Storage)
+      ↓
+Presigned URL → Back to Frontend
+```
 
 ---
 
@@ -21,7 +43,7 @@ Built with a modern React frontend and a Node.js + Express backend, this project
 
 ### Frontend
 
-* React
+* React(Vite)
 * CSS
 
 ### Backend
@@ -30,11 +52,14 @@ Built with a modern React frontend and a Node.js + Express backend, this project
 * Express
 * Multer
 
-### Cloud
+### Cloud & DevOps
 
+* Vercel (Frontend Hosting)
+* Render (Backend Hosting)
 * AWS S3
 * AWS SDK v3
 * Presigned URLs
+* Environment Variables
 
 ---
 
@@ -50,7 +75,7 @@ CloudSnap/
 
 ---
 
-## ⚙️ Setup Instructions
+## ⚙️ Local Development Setup
 
 ### 1️⃣ Clone the repository
 
@@ -113,12 +138,13 @@ http://localhost:5173
 * Images are uploaded to a **private S3 bucket**
 * Backend generates a **presigned URL**
 * Frontend uses this URL to preview the image
-* The URL expires after a fixed time
+* The URL expires after a fixed time (1 hour)
 
 ### This ensures:
 
 * No public access to your bucket
 * Temporary, controlled access to files
+* Secure cloud storage pattern
 
 ---
 
@@ -146,11 +172,12 @@ http://localhost:5173
 
 ## 🧠 What I Learned
 
-* Handling file uploads in full-stack applications
+* Designing and deploying distributed systems
 * Integrating AWS S3 using AWS SDK v3
-* Generating presigned URLs for secure access
-* Managing environment variables securely
-* Building responsive and interactive UI
+* Using presigned URLs for private file access
+* Managing environment variables across platforms
+* Handling CORS and cross-origin communication
+* Deploying frontend and backend independently
 
 ---
 
