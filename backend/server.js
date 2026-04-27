@@ -14,7 +14,12 @@ dotenv.config();
 const app = express();
 const upload = multer({ storage: multer.memoryStorage() });
 
-app.use(cors());
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://your-vercel-url.vercel.app"
+  ]
+}));
 app.use(express.json());
 
 const s3 = new S3Client({
@@ -75,5 +80,5 @@ console.log("Loaded region:", process.env.AWS_REGION);
 console.log("Loaded bucket:", process.env.AWS_BUCKET_NAME);
 
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
