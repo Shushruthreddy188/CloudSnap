@@ -15,6 +15,7 @@ const getTime = () =>
     minute: "2-digit",
     second: "2-digit",
   });
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";
 
 export default function App() {
   const [file, setFile] = useState(null);
@@ -129,7 +130,7 @@ export default function App() {
         }
       }, 350);
 
-      const response = await fetch("http://localhost:5000/api/upload", {
+      const response = await fetch(`${API_BASE_URL}/api/upload`, {
         method: "POST",
         body: formData,
       });
@@ -148,10 +149,13 @@ export default function App() {
       setMessage("Image uploaded successfully ✨");
       addLog(`Upload complete: ${data.fileUrl}`, "success");
     } catch (error) {
+      const errorMessage =
+    error instanceof Error ? error.message : "Upload failed";
+      
       setProgress(0);
       setProgressLabel("Upload failed");
-      setMessage(error.message || "Upload failed");
-      addLog(error.message || "Upload failed", "error");
+      setMessage(errorMessage);
+      addLog(errorMessage, "error");
     } finally {
       setLoading(false);
     }
