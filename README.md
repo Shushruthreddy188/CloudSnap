@@ -6,8 +6,9 @@ It is deployed as a distributed system with a modern React frontend on Vercel an
 
 ---
 
-# 🌍 Live Demo
-🌐 Frontend: https://cloud-snap-five.vercel.app
+## 🌐 Live Demo
+
+🚀 Frontend: https://cloud-snap-five.vercel.app  
 ⚙️ Backend API: https://cloudsnap-8qek.onrender.com
 
 ---
