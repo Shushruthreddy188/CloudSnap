@@ -17,7 +17,8 @@ const upload = multer({ storage: multer.memoryStorage() });
 app.use(cors({
   origin: [
     "http://localhost:5173",
-    "https://your-vercel-url.vercel.app"
+    "https://cloud-snap-five.vercel.app",
+    /^https:\/\/cloud-snap-.*\.vercel\.app$/
   ]
 }));
 app.use(express.json());
